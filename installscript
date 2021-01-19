@@ -61,6 +61,11 @@ echo install homebrew
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# @todo - configure github
+echo 'Install Github CLI'
+echo '------------'
+brew install gh
+
 echo 'Install node'
 echo '------------'
 brew install node@8
@@ -71,7 +76,7 @@ brew install pkg-config
 
 echo 'Install wget'
 echo '------------'
-brew install wget --overwrite
+brew install wget --force
 
 echo 'Install httpie'
 echo '--------------'
@@ -93,19 +98,14 @@ echo 'Install doctl'
 echo '-------------'
 brew install doctl
 
-echo 'Install brew-cask'
-echo '-----------------'
-brew tap caskroom/cask
-brew install brew-cask
-
 echo 'Install some nice quicklook plugins'
 echo '-----------------------------------'
 brew cask install --force qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webp-quicklook suspicious-package
 
 echo 'Install php'
 echo '-----------'
+brew install php@7.3
 brew install php@7.4
-brew install php@8.0
 
 
 echo 'Install imagemagick'
@@ -128,22 +128,15 @@ echo 'Install redis'
 echo '-------------'
 pecl install redis
 
-echo 'Install laravel envoy'
-echo '---------------------'
-composer global require "laravel/envoy=~2.0"
-
-echo 'Install phpunit-watcher'
-echo '-----------------------'
-composer global require spatie/phpunit-watcher
-
-echo 'Install mixed-content-scanner-cli'
-echo '---------------------------------'
-composer global require spatie/mixed-content-scanner-cli
 
 echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
 valet install
+
+echo 'Install beyondcode expose'
+echo '---------------------'
+composer global require beyondcode/expose
 
 echo 'Install mysql'
 echo '-------------'

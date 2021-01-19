@@ -2,6 +2,7 @@
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
 alias a="php artisan"
+alias art="php artisan"
 alias c="composer"
 alias cu="composer update"
 alias cr="composer require"
@@ -16,8 +17,9 @@ alias p="phpunit"
 alias pf="phpunit --filter "
 alias d="php artisan dusk"
 alias sshconfig="vi ~/.ssh/config"
-alias copykey='command cat ~/.ssh/id_rsa.public | pbcopy'
+alias copykey='command cat ~/.ssh/id_rsa.pub | pbcopy'
 alias sail='./vendor/bin/sail'
+alias tinker='php artisan tinker'
 
 
 # JavaScript
@@ -71,10 +73,6 @@ alias sudo='sudo '
 
 # Scape webpage
 alias scrape="scrapeUrl"
-
-# Switch NPM
-alias npmnpm="npm config set registry https://registry.npmjs.org"
-alias npmspatie="npm config set registry https://npm.spatie.be"
 
 # Restart touch bar
 alias touchbar="killall ControlStrip"
